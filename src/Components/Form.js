@@ -12,14 +12,19 @@ export default function Form() {
     let value = e.target.value;
     setFormData({ ...formData, [name]: value });
   }
+  function handleSubmit(e){
+    (e).preventDefault()
+    console.log(formData)
+  }
   return (
     <div>
-      <form className="form-control">
+    <form onSubmit={handleSubmit} className="form-control">
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
             Title
           </label>
-          <input
+          <input 
+            onChange={handleChange}
             type="text"
             className="form-control"
             id="title"
