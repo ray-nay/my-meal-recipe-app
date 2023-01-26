@@ -5,6 +5,7 @@ export default function Form() {
     title: "",
     description: "",
     ingredients: "",
+    image:""
   });
 
   function handleChange(e) {
@@ -14,7 +15,18 @@ export default function Form() {
   }
   function handleSubmit(e){
     (e).preventDefault()
-    console.log(formData)
+    // console.log(formData)
+    fetch ('http://localhost:3000/meals', {
+        method: "POST", 
+        headers: {
+            "Content-Type":"application/json",
+        },
+        body: JSON.stringify(formData)
+    })
+    .then((res)=> res.json())
+    .then((data)=> console.log(data))
+    
+    
   }
   return (
     <div>
@@ -55,6 +67,19 @@ export default function Form() {
             id="ingredients"
             placeholder="Add Ingredients"
             name="ingredients"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="image" className="form-label">
+            Image
+          </label>
+          <input
+            onChange={handleChange}
+            type="text"
+            className="form-control"
+            id="image"
+            placeholder="Add Image here"
+            name="image"
           />
         </div>
         <div className="col-auto">

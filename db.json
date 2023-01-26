@@ -1,3 +1,18 @@
 {
-    "meals": []
+  "meals": [
+    {
+      "title": "Matoke",
+      "description": "ewiu3u3432ih23oi",
+      "ingredients": "Flour, water.",
+      "image": "https://www.themealdb.com/images/media/meals/58oia61564916529.jpg",
+      "id": 1
+    },
+    {
+      "title": "Matoke",
+      "description": "ewiu3u3432ih23oi",
+      "ingredients": "Flour, water.",
+      "image": "https://www.themealdb.com/images/media/meals/58oia61564916529.jpg",
+      "id": 2
+    }
+  ]
 }
