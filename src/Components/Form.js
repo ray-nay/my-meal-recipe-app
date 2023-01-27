@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Form() {
+export default function Form({meals, setMeals}) {
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -24,7 +24,7 @@ export default function Form() {
         body: JSON.stringify(formData)
     })
     .then((res)=> res.json())
-    .then((data)=> console.log(data))
+    .then((data)=> setMeals([...meals, data]))
     
     
   }
