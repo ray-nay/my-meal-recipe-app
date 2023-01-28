@@ -14,7 +14,7 @@ export default function NavBar() {
         Home
       </NavLink>
       <NavLink style={{ marginRight: "10px" }} to="/form">
-        Add meal
+        Add new Recipe
       </NavLink>
     </div>
   )
