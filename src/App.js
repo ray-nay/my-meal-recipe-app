@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Form from './Components/Form';
 import ViewRecipe from './Components/ViewRecipe';
-
+import NavBar from './Components/NavBar';
 
 function App() {
   
@@ -16,8 +16,10 @@ function App() {
       .then((data) => setMeals(data))
   }, [])
   return (
+    
     <BrowserRouter>
       <div className="App">
+      <NavBar />
         <Routes>
           <Route path="/" element={<Home meals = {meals} />} />
           <Route path="/form" element={<Form />}/>
