@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 export default function Form({meals, setMeals}) {
+  const formRef=useRef()
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -24,13 +25,21 @@ export default function Form({meals, setMeals}) {
         body: JSON.stringify(formData)
     })
     .then((res)=> res.json())
-    .then((data)=> setMeals([...meals, data]))
+    .then((data)=> {
+      setMeals([...meals, data])
+      formRef.current.reset()
+     
+
+    
+    
+    })
+    
     
     
   }
   return (
     <div>
-    <form onSubmit={handleSubmit} className="form-control">
+    <form onSubmit={handleSubmit} className="form-control" ref={formRef}>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
             Title
@@ -91,3 +100,11 @@ export default function Form({meals, setMeals}) {
     </div>
   );
 }
+
+
+// setFormData({
+//   title:'',
+//   description:'',
+//   ingredients:'',
+//   image:''
+// }) 

@@ -1,5 +1,5 @@
 import React, {useState, useEffect}from 'react'
-import Form from './Form'
+
 import MealCard from './MealCard'
 
 
@@ -10,7 +10,7 @@ export default function Home({meals}) {
 
 
   return (
-    <div>
+    <div className='row g-4'>
     {meals.map(meal=><MealCard title={meal.title} image={meal.image} key={meal.id} id ={meal.id} />)}
         
     </div>

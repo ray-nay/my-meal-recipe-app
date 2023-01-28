@@ -16,7 +16,7 @@ console.log({id})
   console.log(selectedMeals)
   return (
     <div>ViewRecipe
-       {/* <img> {selectedMeals.image}</img> */}
+       <img src ={selectedMeals.image}/>
        <h1>{selectedMeals.title}</h1> 
         <p>{selectedMeals.description}</p>
         <p>{selectedMeals.ingredients}</p>

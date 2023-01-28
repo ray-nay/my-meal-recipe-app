@@ -21,8 +21,8 @@ function App() {
       <div className="App">
       <NavBar />
         <Routes>
-          <Route path="/" element={<Home meals = {meals} />} />
-          <Route path="/form" element={<Form />}/>
+          <Route path="/" element={<Home meals = {meals}  />} />
+          <Route path="/form" element={<Form meals={meals} setMeals={setMeals} />}/>
           <Route path="/recipe/:id" element={<ViewRecipe />} />
         </Routes>
         
