@@ -1,5 +1,5 @@
 import React, {useEffect, useState, } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import MealCard from './MealCard'
 
 export default function ViewRecipe() {
@@ -15,11 +15,14 @@ console.log({id})
   }, [])
   console.log(selectedMeals)
   return (
-    <div>ViewRecipe
+    <div>
        <img src ={selectedMeals.image}/>
        <h1>{selectedMeals.title}</h1> 
         <p>{selectedMeals.description}</p>
-        <p>{selectedMeals.ingredients}</p>
+        <p>Ingredients:{selectedMeals.ingredients}</p>
+        <Link to={"/"} className="btn btn-primary">
+          Back
+        </Link>
      </div>
   )
 }

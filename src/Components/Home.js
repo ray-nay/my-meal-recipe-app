@@ -10,7 +10,7 @@ export default function Home({meals}) {
 
 
   return (
-    <div className='row g-4'>
+    <div id="card-content" className='row g-3'>
     {meals.map(meal=><MealCard title={meal.title} image={meal.image} key={meal.id} id ={meal.id} />)}
         
     </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function MealCard({title, image, id}) {
   return (
-    <div className="col-4 col-md-4 col-lg-4">
+    <div className="col">
     <div className="card" style={{width: "18rem"}}>
       <img src={image} className="card-img-top" alt="..." />
       <div className="card-body">
