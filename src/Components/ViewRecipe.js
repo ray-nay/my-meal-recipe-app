@@ -15,11 +15,11 @@ console.log({id})
   }, [])
   console.log(selectedMeals)
   return (
-    <div>
+    <div className='Recipe'>
        <img src ={selectedMeals.image}/>
        <h1>{selectedMeals.title}</h1> 
         <p>{selectedMeals.description}</p>
-        <p>Ingredients:{selectedMeals.ingredients}</p>
+        <b><p>Ingredients:{selectedMeals.ingredients}</p></b>
         <Link to={"/"} className="btn btn-primary">
           Back
         </Link>

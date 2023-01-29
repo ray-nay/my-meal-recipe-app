@@ -39,4 +39,21 @@
 #card-content{
   padding: 1% 20% 3% ;
 }
-
+.Nav{
+  font-size: 24px;
+  text-align: left;
+  padding-left: 6%;
+  padding-top: 15px;
+}
+.Recipe{
+  padding: 1% 20% 3% ;
+}
+.Recipe img{
+  width: 50%;
+}
+.Recipe p{
+  text-align:justify;
+}
+.form{
+  padding: 1% 20% 3% ;
+}

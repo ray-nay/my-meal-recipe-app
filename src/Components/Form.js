@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import Swal from 'sweetalert2'
 
 export default function Form({meals, setMeals}) {
   const formRef=useRef()
@@ -33,12 +34,12 @@ export default function Form({meals, setMeals}) {
     
     
     })
-    
+    Swal.fire('Your Recipe Has Been Added Successfully')
     
     
   }
   return (
-    <div>
+    <div className="form">
     <form onSubmit={handleSubmit} className="form-control" ref={formRef}>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
