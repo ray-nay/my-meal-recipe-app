@@ -8,6 +8,9 @@ export default function ViewRecipe() {
   let {id}=useParams()
    
 console.log({id})
+
+//fetching the selected meal recipe.
+
   useEffect(() => {
     fetch(`http://localhost:3000/meals/${id}`)
       .then(res => res.json())

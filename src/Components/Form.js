@@ -15,6 +15,7 @@ export default function Form({meals, setMeals}) {
     let value = e.target.value;
     setFormData({ ...formData, [name]: value });
   }
+  //Function to submit data from the form.
   function handleSubmit(e){
     (e).preventDefault()
     // console.log(formData)
@@ -28,6 +29,8 @@ export default function Form({meals, setMeals}) {
     .then((res)=> res.json())
     .then((data)=> {
       setMeals([...meals, data])
+
+      //Resetting the input values in the form after submission.
       formRef.current.reset()
      
 
@@ -103,9 +106,3 @@ export default function Form({meals, setMeals}) {
 }
 
 
-// setFormData({
-//   title:'',
-//   description:'',
-//   ingredients:'',
-//   image:''
-// }) 

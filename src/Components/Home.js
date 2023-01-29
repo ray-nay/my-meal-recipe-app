@@ -20,9 +20,6 @@ export default function Home({meals}) {
 
 
 
-{/* <div className="App">
-<Home meals={meals} setMeals={setMeals} />
-</div> */}
 
 
-{/* <Form meals={meals} setMeals={setMeals}/> */}
+
