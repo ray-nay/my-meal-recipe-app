@@ -42,7 +42,7 @@ This is the page that displays the full recipe as well as ingredients after the 
 ![Search page](./images/viewrecipe.png)
 
 ## Live site
-[Live link]()
+[Live link](https://my-meal-recipe-app.vercel.app/)
 
 ### Deployment link
 (https://api.jsonbin.io/v3/b/63d56141ebd26539d06a338e)
